@@ -1,0 +1,4 @@
+split,start_hour,end_hour,n_transactions,n_fraud,fraud_rate_pct,fraud_amount_eur
+1_train,0.0,33.4,170236,342.0,0.201,38632.63
+2_validation,33.4,40.3,56746,57.0,0.1,12231.09
+3_test,40.3,48.0,56744,74.0,0.13,7727.67

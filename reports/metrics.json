@@ -1,0 +1,140 @@
+{
+  "review_cost_eur": 5.0,
+  "data": {
+    "n_rows_raw": 284807,
+    "n_rows_clean": 283726,
+    "n_duplicates_removed": 1081,
+    "n_fraud": 473,
+    "fraud_rate_pct": 0.167,
+    "splits": {
+      "train": {
+        "n": 170236,
+        "n_fraud": 342,
+        "fraud_amount_eur": 38632.63,
+        "hours": [
+          0.0,
+          33.4
+        ]
+      },
+      "valid": {
+        "n": 56746,
+        "n_fraud": 57,
+        "fraud_amount_eur": 12231.09,
+        "hours": [
+          33.4,
+          40.3
+        ]
+      },
+      "test": {
+        "n": 56744,
+        "n_fraud": 74,
+        "fraud_amount_eur": 7727.67,
+        "hours": [
+          40.3,
+          48.0
+        ]
+      }
+    }
+  },
+  "selected_model": "LightGBM pondéré €",
+  "test_results": [
+    {
+      "model": "Règle montant",
+      "threshold": 0.994,
+      "valid_net_savings": 1390.87,
+      "pr_auc_test": 0.0015,
+      "roc_auc_test": 0.3851,
+      "n_alerts": 276,
+      "n_fraud": 74,
+      "n_fraud_caught": 1,
+      "n_false_alerts": 275,
+      "n_fraud_missed": 73,
+      "recall_count": 0.0135,
+      "precision": 0.0036,
+      "fraud_amount_total": 7727.67,
+      "fraud_amount_saved": 1504.93,
+      "fraud_amount_lost": 6222.74,
+      "recall_amount": 0.1947,
+      "alert_cost": 1380.0,
+      "net_savings": 124.93,
+      "loss_reduction_pct": 0.0162,
+      "alerts_per_hour": 36.0562,
+      "ci90_low": -1460.0,
+      "ci90_high": 3119.79
+    },
+    {
+      "model": "Régression logistique",
+      "threshold": 1.0,
+      "valid_net_savings": 7479.23,
+      "pr_auc_test": 0.7443,
+      "roc_auc_test": 0.9811,
+      "n_alerts": 49,
+      "n_fraud": 74,
+      "n_fraud_caught": 47,
+      "n_false_alerts": 2,
+      "n_fraud_missed": 27,
+      "recall_count": 0.6351,
+      "precision": 0.9592,
+      "fraud_amount_total": 7727.67,
+      "fraud_amount_saved": 4657.04,
+      "fraud_amount_lost": 3070.63,
+      "recall_amount": 0.6026,
+      "alert_cost": 245.0,
+      "net_savings": 4412.04,
+      "loss_reduction_pct": 0.5709,
+      "alerts_per_hour": 6.4013,
+      "ci90_low": 1579.408,
+      "ci90_high": 7790.167
+    },
+    {
+      "model": "LightGBM",
+      "threshold": 0.3622,
+      "valid_net_savings": 7496.23,
+      "pr_auc_test": 0.7957,
+      "roc_auc_test": 0.983,
+      "n_alerts": 62,
+      "n_fraud": 74,
+      "n_fraud_caught": 54,
+      "n_false_alerts": 8,
+      "n_fraud_missed": 20,
+      "recall_count": 0.7297,
+      "precision": 0.871,
+      "fraud_amount_total": 7727.67,
+      "fraud_amount_saved": 5044.6,
+      "fraud_amount_lost": 2683.07,
+      "recall_amount": 0.6528,
+      "alert_cost": 310.0,
+      "net_savings": 4734.6,
+      "loss_reduction_pct": 0.6127,
+      "alerts_per_hour": 8.0996,
+      "ci90_low": 1825.6175,
+      "ci90_high": 8225.287
+    },
+    {
+      "model": "LightGBM pondéré €",
+      "threshold": 0.0245,
+      "valid_net_savings": 7689.91,
+      "pr_auc_test": 0.7978,
+      "roc_auc_test": 0.9802,
+      "n_alerts": 308,
+      "n_fraud": 74,
+      "n_fraud_caught": 63,
+      "n_false_alerts": 245,
+      "n_fraud_missed": 11,
+      "recall_count": 0.8514,
+      "precision": 0.2045,
+      "fraud_amount_total": 7727.67,
+      "fraud_amount_saved": 5991.55,
+      "fraud_amount_lost": 1736.12,
+      "recall_amount": 0.7753,
+      "alert_cost": 1540.0,
+      "net_savings": 4451.55,
+      "loss_reduction_pct": 0.5761,
+      "alerts_per_hour": 40.2366,
+      "ci90_low": 1374.2785,
+      "ci90_high": 8087.0465
+    }
+  ],
+  "pr_auc_random_split_lightgbm": 0.8195,
+  "pr_auc_temporal_split_lightgbm": 0.7957
+}

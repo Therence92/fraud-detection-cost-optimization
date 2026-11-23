@@ -1,0 +1,2 @@
+n_rows_raw,n_rows_clean,n_duplicates_removed,n_fraud_raw,n_fraud_clean,n_fraud_duplicates_removed,fraud_rate_pct,n_null_amount,n_null_class
+284807,283726,1081,492.0,473.0,19.0,0.167,0,0
